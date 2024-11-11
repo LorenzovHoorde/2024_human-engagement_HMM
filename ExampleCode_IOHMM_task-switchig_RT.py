@@ -165,7 +165,7 @@ print(SHMM_2.model_emissions[1][0].coef) # Intecept for state 2, 1151 RT, 125 ms
 print(np.sqrt(SHMM_2.model_emissions[0][0].dispersion))
 print(np.sqrt(SHMM_2.model_emissions[1][0].dispersion))
 
- # The transition probability between two hidden states
+# The transition probability between two hidden states
 print(np.exp(SHMM_2.model_transition[0].predict_log_proba(np.array([[]])))) # 93.2% chance of stayin in fast resp.
 print(np.exp(SHMM_2.model_transition[1].predict_log_proba(np.array([[]])))) # 79.8% chance of staying in slow resp.
 
@@ -197,7 +197,7 @@ print(np.sqrt(SHMM_3.model_emissions[0][0].dispersion))
 print(np.sqrt(SHMM_3.model_emissions[1][0].dispersion))
 
 # The transition probability between two hidden states, for task-repetitions and switches seperately 
- 
+
 # Task-repetition 
 print(np.exp(SHMM_3.model_transition[0].predict_log_proba(np.array([[0]]))))
 print(np.exp(SHMM_3.model_transition[1].predict_log_proba(np.array([[0]])))) 
@@ -277,8 +277,8 @@ print(SHMM_4.model_emissions[1][0].coef) # Intecept for state 2, 636 RT, 86 ms s
 print(np.sqrt(SHMM_4.model_emissions[0][0].dispersion))
 print(np.sqrt(SHMM_4.model_emissions[1][0].dispersion))
 
- # The transition probability between two hidden states
- # Fake frequent 
+# The transition probability between two hidden states
+# Fake frequent 
 print(np.exp(SHMM_4.model_transition[0].predict_log_proba(np.array([[0]])))) # 80.4% chance of staying in slow resp.
 print(np.exp(SHMM_4.model_transition[1].predict_log_proba(np.array([[0]])))) # 92.3% chance of staying in fast resp.
 
@@ -332,8 +332,8 @@ print(SHMM_5.model_emissions[1][0].coef) # Intecept for state 2, 1153 RT, 125 ms
 print(np.sqrt(SHMM_5.model_emissions[0][0].dispersion))
 print(np.sqrt(SHMM_5.model_emissions[1][0].dispersion))
 
- # The transition probability between two hidden states
- # No Reward 
+# The transition probability between two hidden states
+# No Reward 
 print(np.exp(SHMM_5.model_transition[0].predict_log_proba(np.array([[0]])))) # 91.1% chance of stayin in fast resp.
 print(np.exp(SHMM_5.model_transition[1].predict_log_proba(np.array([[0]])))) # 80.8% chance of staying in slow resp.
 
